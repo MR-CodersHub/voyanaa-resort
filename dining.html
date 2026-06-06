@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining & Gastronomy | Voyana Kodaikanal Luxury</title>
+    <meta name="description" content="Experience high-end forest-to-table dining in Kodaikanal. Enjoy organic garden ingredients, candlelight fireside dinners, and mountain BBQ nights.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="header sticky" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-main">VOYANA</span>
+                <span class="logo-sub">SANCTUARIES</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="villas.html" class="nav-link">Villas</a></li>
+                    <li><a href="cottages.html" class="nav-link">Cottages</a></li>
+                    <li><a href="retreats.html" class="nav-link">Retreats</a></li>
+                    <li><a href="dining.html" class="nav-link">Dining</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-book-mobile"><a href="booking.html" class="btn btn-nav">Book Stay</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-right-actions">
+                <!-- Theme Toggle Switch -->
+                <div class="theme-switch" id="themeToggleBtn">
+                    <div class="theme-switch-slider"><i class="fa-solid fa-moon" id="themeToggleIcon"></i></div>
+                </div>
+
+                <a href="booking.html" class="btn btn-nav">Book Stay</a>
+            </div>
+        </div>
+</header>
+
+    <!-- Page Header -->
+    <section class="page-header dining-banner">
+        <div class="hero-overlay"></div>
+        <div class="page-header-content">
+            <h1 class="page-header-title">Dining & Gastronomy</h1>
+            <div class="page-header-breadcrumbs">
+                <a href="index.html">Home</a> / <span>Dining</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culinary Intro Section -->
+    <section class="section intro-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">FOREST TO TABLE</span>
+                <h2 class="section-title">Mountain Culinary Excellence</h2>
+                <div class="divider"></div>
+                <p class="section-desc">At Voyana Sanctuaries, dining is an art form. We prepare high-altitude recipes using handpicked ingredients from our private organic greenhouse and orchards, creating custom mountain flavors.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dining Options Section -->
+    <section class="section bg-light" style="padding-top: 0;">
+        <div class="container">
+            <div class="retreats-grid">
+                
+                <!-- Experience 1 -->
+                <div class="experience-card">
+                    <div class="experience-image-wrapper">
+                        <img src="assets/gallery_interior.png" alt="Organic Forest Breakfast" class="experience-image">
+                    </div>
+                    <div class="experience-content">
+                        <span class="sub-title">COMPLIMENTARY</span>
+                        <h3>Organic Forest Breakfast</h3>
+                        <p>Freshly baked sourdough breads, organic mountain honey, orchard-sourced berry preserves, farm eggs, and single-origin estate coffee. Included automatically with all stays.</p>
+                        <div class="experience-meta">
+                            <span class="experience-duration"><i class="fa-regular fa-clock"></i> Daily 7:30 AM - 10:30 AM</span>
+                            <span class="experience-price">Included <span>with stay</span></span>
+                        </div>
+                        <div class="property-action">
+                            <button class="btn btn-primary btn-order-food" data-item="Organic Forest Breakfast" data-price="0">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="experience-card">
+                    <div class="experience-image-wrapper">
+                        <img src="assets/villa_pine.png" alt="Garden-to-Table Dining" class="experience-image">
+                    </div>
+                    <div class="experience-content">
+                        <span class="sub-title">ORGANIC SANCTUARY</span>
+                        <h3>Garden-to-Table Lunch & Dinner</h3>
+                        <p>A changing daily menu featuring high-altitude grains, handpicked local root vegetables, and fresh forest herbs. Served directly to your villa's private dining area.</p>
+                        <div class="experience-meta">
+                            <span class="experience-duration"><i class="fa-regular fa-clock"></i> Lunch & Dinner</span>
+                            <span class="experience-price">₹1,500 <span>/ person</span></span>
+                        </div>
+                        <div class="property-action">
+                            <button class="btn btn-primary btn-order-food" data-item="Garden-to-Table Lunch & Dinner" data-price="1500">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="experience-card">
+                    <div class="experience-image-wrapper">
+                        <img src="assets/cottage_mist.png" alt="Fireside Deck Candlelight Dinner" class="experience-image">
+                    </div>
+                    <div class="experience-content">
+                        <span class="sub-title">ROMANTIC EXPERIENCES</span>
+                        <h3>Fireside Deck Candlelight Dinner</h3>
+                        <p>Enjoy a private, multi-course candlelight feast served on your villa's private deck next to a warm roaring fireplace, overlooking the misty valleys below.</p>
+                        <div class="experience-meta">
+                            <span class="experience-duration"><i class="fa-regular fa-clock"></i> Evening</span>
+                            <span class="experience-price">₹6,000 <span>/ couple</span></span>
+                        </div>
+                        <div class="property-action">
+                            <button class="btn btn-primary btn-order-food" data-item="Fireside Deck Candlelight Dinner" data-price="6000">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="experience-card">
+                    <div class="experience-image-wrapper">
+                        <img src="assets/experience_trek.png" alt="Mountain BBQ" class="experience-image">
+                    </div>
+                    <div class="experience-content">
+                        <span class="sub-title">FOREST FEASTS</span>
+                        <h3>Mountain BBQ & Bonfire Feast</h3>
+                        <p>A rustic wood-smoke outdoor barbecue grill options with custom-marinated skewers, jacket potatoes, mountain spices, and fireside dessert options.</p>
+                        <div class="experience-meta">
+                            <span class="experience-duration"><i class="fa-regular fa-clock"></i> Evening</span>
+                            <span class="experience-price">₹4,500 <span>/ group</span></span>
+                        </div>
+                        <div class="property-action">
+                            <button class="btn btn-primary btn-order-food" data-item="Mountain BBQ & Bonfire Feast" data-price="4500">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section (Showing Food Included in Packages) -->
+    <section class="section packages-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">SPECIAL ESCAPES</span>
+                <h2 class="section-title">Gourmet Packages & Offers</h2>
+                <div class="divider"></div>
+                <p class="section-desc">Unlock culinary value with custom holiday packages that include our signature dining options.</p>
+            </div>
+
+            <!-- Packages Grid (3 columns) -->
+            <div class="packages-grid">
+                <!-- Package 1 -->
+                <div class="package-card">
+                    <div class="package-content">
+                        <span class="package-tag">Romantic Getaway</span>
+                        <h3>Honeymoon Mist Package</h3>
+                        <p class="package-desc">Spend 3 nights in our premium Silver Mist Hideaway. Includes champagne on arrival, private candlelight deck dinner, daily organic breakfast, and wellness massage sessions.</p>
+                        <div class="package-price">
+                            <span class="pkg-price">₹45,000</span>
+                            <span class="pkg-duration">/ 3 Nights</span>
+                        </div>
+                        <ul class="package-features">
+                            <li><i class="fa-solid fa-circle-check"></i> Private Honeymoon Suite</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Daily Organic Breakfast</li>
+                            <li><i class="fa-solid fa-circle-check"></i> 1 Candlelight Dinner</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Couple Massage Session</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Private Jeep Tour</li>
+                        </ul>
+                        <a href="contact.html?subject=Honeymoon-Mist" class="btn btn-outline btn-block">Inquire Package</a>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="package-card featured-package">
+                    <div class="package-content">
+                        <span class="package-tag">Monsoon Special</span>
+                        <h3>Monsoon Fog Sanctuary</h3>
+                        <p class="package-desc">Embrace Kodaikanal's famous monsoon. Stay 4 nights for the price of 3 at Glass Forest Manor. Complete with all-inclusive gourmet meals, unlimited warm cider, and nightly indoor hearth fires.</p>
+                        <div class="package-price">
+                            <span class="pkg-price">₹84,000</span>
+                            <span class="pkg-duration">/ 4 Nights</span>
+                        </div>
+                        <ul class="package-features">
+                            <li><i class="fa-solid fa-circle-check"></i> Stay 4, Pay 3 Nights</li>
+                            <li><i class="fa-solid fa-circle-check"></i> All-Inclusive Gourmet Meals</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Gourmet Hot Cocoa & Cider</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Complimentary Firewood</li>
+                            <li><i class="fa-solid fa-circle-check"></i> 24/7 Butler Support</li>
+                        </ul>
+                        <a href="contact.html?subject=Monsoon-Fog" class="btn btn-primary btn-block">Inquire Package</a>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="package-card">
+                    <div class="package-content">
+                        <span class="package-tag">Adventure Thrills</span>
+                        <h3>Mountain Trail Expedition</h3>
+                        <p class="package-desc">Designed for nature lovers. 2 nights at Whispering Pines Cottage including professional-guided rock climbing, forest BBQ, valley hiking, and camping equipment.</p>
+                        <div class="package-price">
+                            <span class="pkg-price">₹38,000</span>
+                            <span class="pkg-duration">/ 2 Nights</span>
+                        </div>
+                        <ul class="package-features">
+                            <li><i class="fa-solid fa-circle-check"></i> Cozy Stone Cottage</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Professional Trek Guide</li>
+                            <li><i class="fa-solid fa-circle-check"></i> High-Energy Camp Meals</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Mountain BBQ & Bonfire Feast</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Adventure Gear Included</li>
+                        </ul>
+                        <a href="contact.html?subject=Mountain-Trail" class="btn btn-outline btn-block">Inquire Package</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Footer Section -->
+    <footer class="luxury-footer">
+        
+        <!-- Pre-Footer Premium CTA (Visual connection to hero banner) -->
+        <div class="footer-cta-banner">
+            <video autoplay loop muted playsinline class="footer-video-bg">
+                <source src="assets/homepagehero.mp4" type="video/mp4">
+            </video>
+            <div class="footer-cta-overlay"></div>
+            <div class="container footer-cta-container">
+                <div class="footer-cta-card glass-panel">
+                    <span class="sub-title">Bespoke Mountain Sanctuaries</span>
+                    <h2>Ready to Experience Voyana Kodaikanal?</h2>
+                    <p>Reserve your architectural glass villa or cozy stone cottage today. Enjoy 24/7 concierge services, private bonfire dining, and misty mountain valley views.</p>
+                    <div class="footer-cta-buttons">
+                        <a href="booking.html" class="btn btn-primary">Book Your Stay <i class="fa-solid fa-calendar-check"></i></a>
+                        <a href="contact.html" class="btn btn-secondary">Inquire Privately <i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-main-content">
+            <div class="container">
+                <div class="footer-grid">
+                    
+                    <!-- Column 1: Brand & Awards -->
+                    <div class="footer-col brand-col">
+                        <a href="index.html" class="logo">
+                            <span class="logo-main">VOYANA</span>
+                            <span class="logo-sub">SANCTUARIES</span>
+                        </a>
+                        <p class="footer-desc">Curating rare, high-end private sanctuaries and five-star mountain luxury in Kodaikanal. Dedicated to visual elegance, eco-friendliness, and sustainable comfort.</p>
+                        
+                        <div class="footer-awards">
+                            <div class="award-item">
+                                <i class="fa-solid fa-award"></i>
+                                <span>Condé Nast Luxury Winner</span>
+                            </div>
+                            <div class="award-item">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>5-Star Hospitality Standard</span>
+                            </div>
+                        </div>
+
+                        <div class="social-icons">
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Luxury Residences -->
+                    <div class="footer-col">
+                        <h3>Luxury Residences</h3>
+                        <ul>
+                            <li><a href="details.html?id=glass-manor">The Glass Forest Manor</a></li>
+                            <li><a href="details.html?id=elysian-retreat">Elysian Misty Retreat</a></li>
+                            <li><a href="details.html?id=pine-crest">Pine Crest Presidential Villa</a></li>
+                            <li><a href="villas.html">Luxury Villas Portfolio</a></li>
+                            <li><a href="cottages.html">Mountain Cottages Portfolio</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Resort Experiences -->
+                    <div class="footer-col">
+                        <h3>Experiences</h3>
+                        <ul>
+                            <li><a href="retreats.html">Private Mountain Bonfires</a></li>
+                            <li><a href="retreats.html">Guided Pine Forest Trekking</a></li>
+                            <li><a href="retreats.html">Tranquil Lake Boating</a></li>
+                            <li><a href="dining.html">Gourmet Dining Options</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Guest Support -->
+                    <div class="footer-col">
+                        <h3>Guest Services</h3>
+                        <ul>
+                            <li><a href="about.html">About Voyana</a></li>
+                            <li><a href="testimonials.html">Guest Reviews</a></li>
+                            <li><a href="packages.html">Seasonal Packages</a></li>
+                            <li><a href="attractions.html">Local Attractions</a></li>
+                            <li><a href="contact.html">Inquiries & Directions</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 5: Location & Stats -->
+                    <div class="footer-col stats-col">
+                        <h3>The Sanctuary</h3>
+                        <p class="footer-address"><i class="fa-solid fa-location-dot"></i> Kurinji Temple Road, Pine Ridge, Kodaikanal, Tamil Nadu, India</p>
+                        <p class="footer-phone"><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                        <p class="footer-email"><i class="fa-solid fa-envelope"></i> concierge@voyanasanctuaries.com</p>
+                        
+                        <div class="footer-stats">
+                            <div class="stat-bubble">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">Satisfaction</span>
+                            </div>
+                            <div class="stat-bubble">
+                                <span class="stat-number">1.5K+</span>
+                                <span class="stat-label">Guests Hosted</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Newsletter Subscription Row -->
+                <div class="footer-newsletter-row">
+                    <div class="newsletter-text">
+                        <h3>The Voyana Journal</h3>
+                        <p>Subscribe for seasonal weather reports, private dining recipes, and exclusive package releases.</p>
+                    </div>
+                    <form id="newsletter-form" class="newsletter-form">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" aria-label="Subscribe">Subscribe <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+
+                <!-- Footer Bottom Area -->
+                <div class="footer-bottom">
+                    <div class="footer-bottom-flex">
+                        <p class="copyright">&copy; 2026 Voyana Sanctuaries Private Limited. All rights reserved.</p>
+                        <div class="footer-legal">
+                            <a href="#">Privacy Policy</a>
+                            <span class="separator">&bull;</span>
+                            <a href="#">Terms & Conditions</a>
+                        </div>
+                        <p class="crafted">Designed with forest inspiration &bull; Kodaikanal</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Custom Success Toast Notification -->
+    <div class="toast" id="success-toast">
+        <div class="toast-content">
+            <i class="fa-solid fa-circle-check toast-icon"></i>
+            <div class="toast-message">
+                <h4 id="toast-title">Request Submitted</h4>
+                <p id="toast-desc">We will contact you shortly.</p>
+            </div>
+        </div>
+        <button class="toast-close" id="toast-close-btn">&times;</button>
+    </div>
+
+    <!-- Food Order Modal -->
+    <div class="modal-overlay" id="food-order-modal">
+        <div class="modal-box glass-panel" style="max-width: 550px;">
+            <button class="modal-close" id="food-order-modal-close" aria-label="Close Order">&times;</button>
+            <div style="border-bottom: 2px solid var(--color-gold); padding-bottom: 12px; margin-bottom: 20px;">
+                <h2 style="font-family: var(--font-heading); color: var(--color-primary-dark); font-size: 1.8rem; text-transform: uppercase; letter-spacing: 1px;"><i class="fa-solid fa-utensils"></i> Food Ordering</h2>
+                <p style="font-size: 0.85rem; color: var(--color-text-muted);">Configure your room service dining selection below.</p>
+            </div>
+            
+            <form id="dining-order-form" class="contact-form modal-booking-form">
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="order-dining-option"><i class="fa-solid fa-utensils"></i> Selected Dining Option</label>
+                    <select id="order-dining-option" required>
+                        <option value="Organic Forest Breakfast" data-price="0">Organic Forest Breakfast (Complimentary)</option>
+                        <option value="Garden-to-Table Lunch & Dinner" data-price="1500">Garden-to-Table Lunch & Dinner (₹1,500/person)</option>
+                        <option value="Fireside Deck Candlelight Dinner" data-price="6000">Fireside Deck Candlelight Dinner (₹6,000/couple)</option>
+                        <option value="Mountain BBQ & Bonfire Feast" data-price="4500">Mountain BBQ & Bonfire Feast (₹4,500/group)</option>
+                    </select>
+                </div>
+                
+                <div class="form-row" style="margin-bottom: 15px;">
+                    <div class="form-group">
+                        <label for="order-villa"><i class="fa-solid fa-hotel"></i> Your Stay / Retreat Villa</label>
+                        <select id="order-villa" required>
+                            <option value="The Glass Forest Manor">The Glass Forest Manor</option>
+                            <option value="Elysian Misty Retreat">Elysian Misty Retreat</option>
+                            <option value="Pine Crest Presidential Villa">Pine Crest Presidential Villa</option>
+                            <option value="Whispering Pines Cabin">Whispering Pines Cabin</option>
+                            <option value="Silver Mist Honeymoon Hideaway">Silver Mist Honeymoon Hideaway</option>
+                            <option value="Serene Meadows Family Cottage">Serene Meadows Family Cottage</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="order-servings"><i class="fa-solid fa-users"></i> Guests / Servings</label>
+                        <select id="order-servings" required>
+                            <option value="1">1 Person</option>
+                            <option value="2" selected>2 Persons</option>
+                            <option value="4">4 Persons</option>
+                            <option value="6">6 Persons</option>
+                            <option value="8">8 Persons</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row" style="margin-bottom: 15px;">
+                    <div class="form-group">
+                        <label for="order-date"><i class="fa-solid fa-calendar-days"></i> Preferred Date</label>
+                        <input type="date" id="order-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="order-time"><i class="fa-solid fa-clock"></i> Preferred Time Slot</label>
+                        <select id="order-time" required>
+                            <option value="Morning (7:30 AM - 10:30 AM)">Morning (7:30 AM - 10:30 AM)</option>
+                            <option value="Afternoon (12:30 PM - 3:00 PM)">Afternoon (12:30 PM - 3:00 PM)</option>
+                            <option value="Evening (6:00 PM - 9:00 PM)">Evening (6:00 PM - 9:00 PM)</option>
+                            <option value="Night (7:00 PM - 10:00 PM)">Night (7:00 PM - 10:00 PM)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="order-notes"><i class="fa-solid fa-comment-dots"></i> Special Dietary Requests / Notes</label>
+                    <textarea id="order-notes" rows="2" placeholder="e.g. Vegetarian, extra spice, allergies, etc."></textarea>
+                </div>
+
+                <div class="glass-panel" style="padding: 15px; font-size: 0.9rem; margin-bottom: 20px; text-align: center;">
+                    <div style="font-weight: 700; color: var(--color-primary-dark); margin-bottom: 4px;">Estimated Order Total</div>
+                    <div style="font-size: 1.4rem; font-weight: 700; color: var(--color-gold);" id="order-total-price">₹0</div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" style="width: 100%; border-radius: 8px;">
+                    <span>Place Food Order</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

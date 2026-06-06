@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearby Attractions | Voyana Kodaikanal Guide</title>
+    <meta name="description" content="Explore Kodaikanal's local tourist spots near Voyana Sanctuaries. Coaker's Walk, Pine Forests, Bryant Park, and Pillar Rocks guides.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="header sticky" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-main">VOYANA</span>
+                <span class="logo-sub">SANCTUARIES</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="villas.html" class="nav-link">Villas</a></li>
+                    <li><a href="cottages.html" class="nav-link">Cottages</a></li>
+                    <li><a href="retreats.html" class="nav-link">Retreats</a></li>
+                    <li><a href="dining.html" class="nav-link">Dining</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-book-mobile"><a href="booking.html" class="btn btn-nav">Book Stay</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-right-actions">
+                <!-- Theme Toggle Switch -->
+                <div class="theme-switch" id="themeToggleBtn">
+                    <div class="theme-switch-slider"><i class="fa-solid fa-moon" id="themeToggleIcon"></i></div>
+                </div>
+
+                <a href="booking.html" class="btn btn-nav">Book Stay</a>
+            </div>
+        </div>
+</header>
+
+    <!-- Page Header -->
+    <section class="page-header attractions-banner">
+        <div class="hero-overlay"></div>
+        <div class="page-header-content">
+            <h1 class="page-header-title">Nearby Attractions</h1>
+            <div class="page-header-breadcrumbs">
+                <a href="index.html">Home</a> / <span>Attractions Guide</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attractions Section -->
+    <section class="section attractions-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">LOCAL TRAVEL LOG</span>
+                <h2 class="section-title">Explore Kodaikanal's Beauty</h2>
+                <div class="divider"></div>
+                <p class="section-desc">Voyana Sanctuaries sits minutes away from iconic view points, gardens, and pine woods. Use our quick distance directory below.</p>
+            </div>
+
+            <!-- Attractions Grid (3 columns) -->
+            <div class="attractions-grid">
+                <!-- Attraction 1 -->
+                <div class="attraction-card">
+                    <img src="assets/hero_background.png" alt="Coaker's Walk" class="attraction-img">
+                    <div class="attraction-content">
+                        <span class="attraction-distance"><i class="fa-solid fa-person-hiking"></i> 1.2 KM FROM ESTATE</span>
+                        <h3 class="attraction-title">Coaker's Walk</h3>
+                        <p class="attraction-desc">A scenic 1-kilometer pedestrian path built on the steep edges of mountains, offering incredible views of Kodaikanal valley mist and valleys.</p>
+                    </div>
+                </div>
+
+                <!-- Attraction 2 -->
+                <div class="attraction-card">
+                    <img src="assets/experience_lake.png" alt="Kodaikanal Lake" class="attraction-img">
+                    <div class="attraction-content">
+                        <span class="attraction-distance"><i class="fa-solid fa-person-hiking"></i> 2.5 KM FROM ESTATE</span>
+                        <h3 class="attraction-title">Kodaikanal Lake</h3>
+                        <p class="attraction-desc">A beautiful star-shaped manmade lake in the center of town. Highly popular for rowing rowboats, walking, and early morning cycling.</p>
+                    </div>
+                </div>
+
+                <!-- Attraction 3 -->
+                <div class="attraction-card">
+                    <img src="assets/villa_pine.png" alt="Pine Forest" class="attraction-img">
+                    <div class="attraction-content">
+                        <span class="attraction-distance"><i class="fa-solid fa-person-hiking"></i> 4.0 KM FROM ESTATE</span>
+                        <h3 class="attraction-title">The Pine Forest</h3>
+                        <p class="attraction-desc">Tall pine tree sanctuaries planted by British foresters, creating a cinematic misty wood walk for photographers and nature walkers.</p>
+                    </div>
+                </div>
+
+                <!-- Attraction 4 -->
+                <div class="attraction-card">
+                    <img src="assets/experience_trek.png" alt="Pillar Rocks" class="attraction-img">
+                    <div class="attraction-content">
+                        <span class="attraction-distance"><i class="fa-solid fa-person-hiking"></i> 6.2 KM FROM ESTATE</span>
+                        <h3 class="attraction-title">Pillar Rocks</h3>
+                        <p class="attraction-desc">Three giant vertical granite pillar rock boulders standing 400 feet high, enveloped by mist and pine forests, offering scenic viewing platforms.</p>
+                    </div>
+                </div>
+
+                <!-- Attraction 5 -->
+                <div class="attraction-card">
+                    <img src="assets/gallery_interior.png" alt="Bryant Park" class="attraction-img">
+                    <div class="attraction-content">
+                        <span class="attraction-distance"><i class="fa-solid fa-person-hiking"></i> 1.8 KM FROM ESTATE</span>
+                        <h3 class="attraction-title">Bryant Park</h3>
+                        <p class="attraction-desc">A curated botanical garden hosting flower shows, glasshouses, and hundreds of rare varieties of roses and shrubs near the lake.</p>
+                    </div>
+                </div>
+
+                <!-- Attraction 6 -->
+                <div class="attraction-card">
+                    <img src="assets/cottage_mist.png" alt="Silver Cascade Falls" class="attraction-img">
+                    <div class="attraction-content">
+                        <span class="attraction-distance"><i class="fa-solid fa-person-hiking"></i> 7.5 KM FROM ESTATE</span>
+                        <h3 class="attraction-title">Silver Cascade Falls</h3>
+                        <p class="attraction-desc">A beautiful 180-foot waterfall created by the overflow of Kodaikanal Lake, welcoming tourists entering the hill station.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Footer Section -->
+    <footer class="luxury-footer">
+        
+        <!-- Pre-Footer Premium CTA (Visual connection to hero banner) -->
+        <div class="footer-cta-banner">
+            <video autoplay loop muted playsinline class="footer-video-bg">
+                <source src="assets/homepagehero.mp4" type="video/mp4">
+            </video>
+            <div class="footer-cta-overlay"></div>
+            <div class="container footer-cta-container">
+                <div class="footer-cta-card glass-panel">
+                    <span class="sub-title">Bespoke Mountain Sanctuaries</span>
+                    <h2>Ready to Experience Voyana Kodaikanal?</h2>
+                    <p>Reserve your architectural glass villa or cozy stone cottage today. Enjoy 24/7 concierge services, private bonfire dining, and misty mountain valley views.</p>
+                    <div class="footer-cta-buttons">
+                        <a href="booking.html" class="btn btn-primary">Book Your Stay <i class="fa-solid fa-calendar-check"></i></a>
+                        <a href="contact.html" class="btn btn-secondary">Inquire Privately <i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-main-content">
+            <div class="container">
+                <div class="footer-grid">
+                    
+                    <!-- Column 1: Brand & Awards -->
+                    <div class="footer-col brand-col">
+                        <a href="index.html" class="logo">
+                            <span class="logo-main">VOYANA</span>
+                            <span class="logo-sub">SANCTUARIES</span>
+                        </a>
+                        <p class="footer-desc">Curating rare, high-end private sanctuaries and five-star mountain luxury in Kodaikanal. Dedicated to visual elegance, eco-friendliness, and sustainable comfort.</p>
+                        
+                        <div class="footer-awards">
+                            <div class="award-item">
+                                <i class="fa-solid fa-award"></i>
+                                <span>Condé Nast Luxury Winner</span>
+                            </div>
+                            <div class="award-item">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>5-Star Hospitality Standard</span>
+                            </div>
+                        </div>
+
+                        <div class="social-icons">
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Luxury Residences -->
+                    <div class="footer-col">
+                        <h3>Luxury Residences</h3>
+                        <ul>
+                            <li><a href="details.html?id=glass-manor">The Glass Forest Manor</a></li>
+                            <li><a href="details.html?id=elysian-retreat">Elysian Misty Retreat</a></li>
+                            <li><a href="details.html?id=pine-crest">Pine Crest Presidential Villa</a></li>
+                            <li><a href="villas.html">Luxury Villas Portfolio</a></li>
+                            <li><a href="cottages.html">Mountain Cottages Portfolio</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Resort Experiences -->
+                    <div class="footer-col">
+                        <h3>Experiences</h3>
+                        <ul>
+                            <li><a href="retreats.html">Private Mountain Bonfires</a></li>
+                            <li><a href="retreats.html">Guided Pine Forest Trekking</a></li>
+                            <li><a href="retreats.html">Tranquil Lake Boating</a></li>
+                            <li><a href="dining.html">Gourmet Dining Options</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Guest Support -->
+                    <div class="footer-col">
+                        <h3>Guest Services</h3>
+                        <ul>
+                            <li><a href="about.html">About Voyana</a></li>
+                            <li><a href="testimonials.html">Guest Reviews</a></li>
+                            <li><a href="packages.html">Seasonal Packages</a></li>
+                            <li><a href="attractions.html">Local Attractions</a></li>
+                            <li><a href="contact.html">Inquiries & Directions</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 5: Location & Stats -->
+                    <div class="footer-col stats-col">
+                        <h3>The Sanctuary</h3>
+                        <p class="footer-address"><i class="fa-solid fa-location-dot"></i> Kurinji Temple Road, Pine Ridge, Kodaikanal, Tamil Nadu, India</p>
+                        <p class="footer-phone"><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                        <p class="footer-email"><i class="fa-solid fa-envelope"></i> concierge@voyanasanctuaries.com</p>
+                        
+                        <div class="footer-stats">
+                            <div class="stat-bubble">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">Satisfaction</span>
+                            </div>
+                            <div class="stat-bubble">
+                                <span class="stat-number">1.5K+</span>
+                                <span class="stat-label">Guests Hosted</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Newsletter Subscription Row -->
+                <div class="footer-newsletter-row">
+                    <div class="newsletter-text">
+                        <h3>The Voyana Journal</h3>
+                        <p>Subscribe for seasonal weather reports, private dining recipes, and exclusive package releases.</p>
+                    </div>
+                    <form id="newsletter-form" class="newsletter-form">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" aria-label="Subscribe">Subscribe <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+
+                <!-- Footer Bottom Area -->
+                <div class="footer-bottom">
+                    <div class="footer-bottom-flex">
+                        <p class="copyright">&copy; 2026 Voyana Sanctuaries Private Limited. All rights reserved.</p>
+                        <div class="footer-legal">
+                            <a href="#">Privacy Policy</a>
+                            <span class="separator">&bull;</span>
+                            <a href="#">Terms & Conditions</a>
+                        </div>
+                        <p class="crafted">Designed with forest inspiration &bull; Kodaikanal</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Custom Success Toast Notification -->
+    <div class="toast" id="success-toast">
+        <div class="toast-content">
+            <i class="fa-solid fa-circle-check toast-icon"></i>
+            <div class="toast-message">
+                <h4 id="toast-title">Request Submitted</h4>
+                <p id="toast-desc">We will contact you shortly.</p>
+            </div>
+        </div>
+        <button class="toast-close" id="toast-close-btn">&times;</button>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

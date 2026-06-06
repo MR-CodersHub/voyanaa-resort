@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyana Kodaikanal | Premium Luxury Villas & Mountain Cottages</title>
+    <meta name="description"
+        content="Experience high-end luxury mountain retreats in Kodaikanal. Book exclusive villas and forest cottages with 24/7 concierge, private bonfires, and misty valley views.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="header" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-main">VOYANA</span>
+                <span class="logo-sub">SANCTUARIES</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="villas.html" class="nav-link">Villas</a></li>
+                    <li><a href="cottages.html" class="nav-link">Cottages</a></li>
+                    <li><a href="retreats.html" class="nav-link">Retreats</a></li>
+                    <li><a href="dining.html" class="nav-link">Dining</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-book-mobile"><a href="booking.html" class="btn btn-nav">Book Stay</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-right-actions">
+                <!-- Theme Toggle Switch -->
+                <div class="theme-switch" id="themeToggleBtn">
+                    <div class="theme-switch-slider"><i class="fa-solid fa-moon" id="themeToggleIcon"></i></div>
+                </div>
+
+                <a href="booking.html" class="btn btn-nav">Book Stay</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <video autoplay loop muted playsinline class="hero-video-bg">
+            <source src="assets/homepagehero.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-card">
+                <div class="hero-badge">
+                    <span class="badge-pulse"></span>
+                    <i class="fa-solid fa-crown"></i>
+                    <span>Premium Mountain Sanctuary</span>
+                </div>
+
+                <h1 class="hero-title">Woven in <span>Pine Forests</span> <br>and <em>Misty Valleys</em></h1>
+
+                <p class="hero-description">Experience an eco-friendly, high-end resort retreat in Kodaikanal. Indulge
+                    in architecturally striking glass villas and cozy mountain-view stone cottages managed under
+                    five-star hospitality standards.</p>
+
+                <div class="hero-buttons">
+                    <a href="villas.html" class="btn btn-primary">
+                        <span>Discover Villas</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="retreats.html" class="btn btn-secondary">
+                        <span>Explore Retreats</span>
+                        <i class="fa-solid fa-compass"></i>
+                    </a>
+                </div>
+
+                <div class="hero-divider-line"></div>
+
+                <div class="hero-amenities">
+                    <span class="hero-amenity"><i class="fa-solid fa-mountain-sun"></i> Misty Valley Views</span>
+                    <span class="hero-amenity"><i class="fa-solid fa-fire"></i> Private Bonfire Decks</span>
+                    <span class="hero-amenity"><i class="fa-solid fa-bell-concierge"></i> 5-Star Butler Service</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#booking-section" aria-label="Scroll to booking section">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Booking Search Bar Section -->
+    <div class="booking-wrapper" id="booking-section">
+        <div class="booking-container glass-panel">
+            <form id="booking-search-form" class="booking-form">
+
+                <!-- Check-in Field -->
+                <div class="booking-field">
+                    <div class="booking-field-icon">
+                        <i class="fa-regular fa-calendar-days"></i>
+                    </div>
+                    <div class="booking-field-content">
+                        <label for="check-in">Check-In</label>
+                        <input type="date" id="check-in" required>
+                    </div>
+                </div>
+
+                <!-- Check-out Field -->
+                <div class="booking-field">
+                    <div class="booking-field-icon">
+                        <i class="fa-regular fa-calendar-days"></i>
+                    </div>
+                    <div class="booking-field-content">
+                        <label for="check-out">Check-Out</label>
+                        <input type="date" id="check-out" required>
+                    </div>
+                </div>
+
+                <!-- Guests Field -->
+                <div class="booking-field">
+                    <div class="booking-field-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="booking-field-content">
+                        <label for="guests">Guests</label>
+                        <select id="guests">
+                            <option value="1">1 Guest</option>
+                            <option value="2" selected>2 Guests</option>
+                            <option value="4">3-4 Guests</option>
+                            <option value="6">5-6 Guests</option>
+                            <option value="8">7-8 Guests</option>
+                            <option value="10">8+ Guests</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Retreat Type Field -->
+                <div class="booking-field">
+                    <div class="booking-field-icon">
+                        <i class="fa-solid fa-hotel"></i>
+                    </div>
+                    <div class="booking-field-content">
+                        <label for="property-type">Retreat Type</label>
+                        <select id="property-type">
+                            <option value="all">All Retreats</option>
+                            <option value="villa">Luxury Villa</option>
+                            <option value="cottage">Exclusive Cottage</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Search Button -->
+                <button type="submit" class="btn btn-primary btn-search">
+                    <span>Search Availability</span>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- Introduction Section -->
+    <section class="section intro-section intro-section--redesigned">
+        <!-- Decorative background elements -->
+        <div class="intro-bg-orb intro-bg-orb--1"></div>
+        <div class="intro-bg-orb intro-bg-orb--2"></div>
+
+        <div class="container intro-container">
+
+            <!-- Left: Organic Leaf & Circle Image Mosaic -->
+            <div class="intro-visual">
+                <div class="intro-image-main">
+                    <img src="assets/villa_pine.png" alt="Voyana Villa in Pine Forest" class="intro-img">
+                    <div class="intro-image-overlay">
+                        <div class="intro-badge-float">
+                            <i class="fa-solid fa-award"></i>
+                            <span>Award-Winning Retreat</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro-image-accent">
+                    <img src="assets/gallery_interior.png" alt="Voyana Interior Design" class="intro-img">
+                </div>
+                <div class="intro-image-detail">
+                    <img src="assets/experience_trek.png" alt="Voyana Hiking Experience" class="intro-img">
+                </div>
+                <!-- Glassmorphism stat badge -->
+                <div class="intro-glass-badge">
+                    <div>
+                        <span class="pill-number" data-target="1500">0</span><span class="pill-plus">+</span>
+                    </div>
+                    <span class="pill-label">Stays & Counting</span>
+                </div>
+            </div>
+
+            <!-- Right: Content Panel -->
+            <div class="intro-content">
+                <div class="intro-title-row">
+                    <div class="intro-title-line"></div>
+                    <span class="sub-title">WELCOME TO VOYANA SANCTUARIES</span>
+                </div>
+                <h2 class="intro-headline">A Symphony of<br><em>Forest, Mist</em><br>& Luxury</h2>
+                <div class="intro-divider"></div>
+                <p class="intro-body">At Voyana Kodaikanal, we bridge the gap between untamed mountain nature and
+                    refined modern living. Our properties are fully serviced retreats designed to offer privacy,
+                    peace, and unparalleled comfort.</p>
+
+                <!-- Feature Pills -->
+                <div class="intro-features">
+                    <div class="intro-feature">
+                        <div class="intro-feature-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="intro-feature-text">
+                            <h4>Unrivaled Privacy & Seclusion</h4>
+                            <p>Exclusive plots away from tourist congestion, ensuring absolute peacefulness.</p>
+                        </div>
+                    </div>
+                    <div class="intro-feature">
+                        <div class="intro-feature-icon">
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                        <div class="intro-feature-text">
+                            <h4>Premium Curated Interiors</h4>
+                            <p>Natural stone, heavy timbers, fireplace hearths, and top-tier luxury furnishings.</p>
+                        </div>
+                    </div>
+                    <div class="intro-feature">
+                        <div class="intro-feature-icon">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <div class="intro-feature-text">
+                            <h4>Sustainable Forest Ethos</h4>
+                            <p>Solar-powered, zero-plastic, organic-garden sanctuaries at altitude.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Row -->
+                <div class="intro-stats-row">
+                    <div class="intro-stat">
+                        <span class="intro-stat-num" data-target="98">0</span><span class="intro-stat-suffix">%</span>
+                        <span class="intro-stat-label">Guest Approval</span>
+                    </div>
+                    <div class="intro-stat-divider"></div>
+                    <div class="intro-stat">
+                        <span class="intro-stat-num" data-target="12">0</span><span class="intro-stat-suffix"></span>
+                        <span class="intro-stat-label">Exclusive Properties</span>
+                    </div>
+                    <div class="intro-stat-divider"></div>
+                    <div class="intro-stat">
+                        <span class="intro-stat-num" data-target="24">0</span><span class="intro-stat-suffix">/7</span>
+                        <span class="intro-stat-label">Concierge</span>
+                    </div>
+                </div>
+
+                <a href="about.html" class="btn btn-primary intro-cta">
+                    Discover Our Story <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Pillars of Voyana (Redesign Highlight) -->
+    <section class="section pillars-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">THE VOYANA STANDARDS</span>
+                <h2 class="section-title">Pillars of Sanctuary Living</h2>
+                <div class="divider"></div>
+                <p class="section-desc">We set the benchmark for luxury high-altitude hospitality, blending ecological
+                    responsibility with bespoke services.</p>
+            </div>
+
+            <div class="amenities-grid">
+                <div class="amenity-card">
+                    <i class="fa-solid fa-tree"></i>
+                    <h3>High-Altitude Sanctuary</h3>
+                    <p>Nestled in towering pine reserves and valley borders with direct viewpoints of Kodaikanal's
+                        valleys.</p>
+                </div>
+                <div class="amenity-card">
+                    <i class="fa-solid fa-bell-concierge"></i>
+                    <h3>Bespoke Hospitality</h3>
+                    <p>Private butlers, custom fireside dining, and custom activity itineraries organized by local
+                        hosts.</p>
+                </div>
+                <div class="amenity-card">
+                    <i class="fa-solid fa-seedling"></i>
+                    <h3>Sustainable Luxury</h3>
+                    <p>Designed with hand-cut stones, zero plastic waste, organic gardens, and solar power generators.
+                    </p>
+                </div>
+                <div class="amenity-card">
+                    <i class="fa-solid fa-spa"></i>
+                    <h3>In-Villa Wellness</h3>
+                    <p>Open-deck yoga, professional massage therapists, and private outdoor wood-fired plunge jacuzzis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Retrospectives (Redesign Preview Cards) -->
+    <section class="section signature-stays-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">SIGNATURE COLLECTION</span>
+                <h2 class="section-title">The Retrospective Suites</h2>
+                <div class="divider"></div>
+                <p class="section-desc">Take a preview of our two most iconic high-altitude retreats, offering
+                    unparalleled architectural views.</p>
+            </div>
+
+            <div class="properties-grid">
+                <!-- Suite 1 -->
+                <div class="property-card">
+                    <div class="property-image-wrapper">
+                        <img src="assets/villa_pine.png" alt="The Glass Forest Manor" class="property-image">
+                        <span class="property-badge">Featured Villa</span>
+                        <div class="property-price-tag">
+                            <span class="price-value">₹28,000</span>
+                            <span class="price-period">/ night</span>
+                        </div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-meta">
+                            <span class="property-location"><i class="fa-solid fa-location-dot"></i> Pine Forest
+                                Ridge</span>
+                            <div class="property-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span>4.9</span>
+                                <span class="review-count">(124 reviews)</span>
+                            </div>
+                        </div>
+                        <h3 class="property-title">The Glass Forest Manor</h3>
+                        <p class="property-description">An architectural masterpiece featuring floor-to-ceiling glass
+                            walls, opening directly into towering pine forests with misty valley views.</p>
+                        <div class="property-specs">
+                            <span><i class="fa-solid fa-user"></i> Up to 6 Guests</span>
+                            <span><i class="fa-solid fa-bed"></i> 3 Bedrooms</span>
+                        </div>
+                        <div class="property-action" style="display: flex; gap: 12px; margin-top: 20px;">
+                            <a href="details.html?id=glass-manor" class="btn btn-outline" style="flex:1;">View
+                                Details</a>
+                            <a href="booking.html?id=glass-manor" class="btn btn-primary" style="flex:1;">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suite 2 -->
+                <div class="property-card">
+                    <div class="property-image-wrapper">
+                        <img src="assets/hero_background.png" alt="Elysian Misty Retreat" class="property-image">
+                        <span class="property-badge">Premier Sanctuary</span>
+                        <div class="property-price-tag">
+                            <span class="price-value">₹35,000</span>
+                            <span class="price-period">/ night</span>
+                        </div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-meta">
+                            <span class="property-location"><i class="fa-solid fa-location-dot"></i> Coaker's Walk
+                                Edge</span>
+                            <div class="property-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span>5.0</span>
+                                <span class="review-count">(98 reviews)</span>
+                            </div>
+                        </div>
+                        <h3 class="property-title">Elysian Misty Retreat</h3>
+                        <p class="property-description">Perched at Kodaikanal's highest ridge, this villa features an
+                            heated outdoor jacuzzi deck hovering over the clouds.</p>
+                        <div class="property-specs">
+                            <span><i class="fa-solid fa-user"></i> Up to 8 Guests</span>
+                            <span><i class="fa-solid fa-bed"></i> 4 Bedrooms</span>
+                        </div>
+                        <div class="property-action" style="display: flex; gap: 12px; margin-top: 20px;">
+                            <a href="details.html?id=elysian-retreat" class="btn btn-outline" style="flex:1;">View
+                                Details</a>
+                            <a href="booking.html?id=elysian-retreat" class="btn btn-primary" style="flex:1;">Book
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="villas.html" class="btn btn-outline">Explore Full Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">GUEST REVIEWS</span>
+                <h2 class="section-title">Experiences Shared</h2>
+                <div class="divider"></div>
+                <p class="section-desc">Read about the memorable getaways experienced by our esteemed visitors.</p>
+            </div>
+
+            <!-- Testimonial Carousel -->
+            <div class="testimonial-carousel-wrapper">
+                <div class="testimonial-carousel" id="testimonial-carousel">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-card">
+                        <div class="rating-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-quote">"The Glass Forest Manor was beyond spectacular. Waking up to misty
+                            valleys through those huge floor-to-ceiling glass walls is something I'll never forget. The
+                            butler service was flawless!"</p>
+                        <div class="testimonial-user">
+                            <h4>Aditya Sen</h4>
+                            <span>Bangalore, India</span>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="testimonial-card">
+                        <div class="rating-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-quote">"Whispering Pines Cabin is a cozy paradise. We sat by the outdoor
+                            bonfire every evening, sipping hot tea. Absolute privacy and incredible greenery. We will
+                            certainly return."</p>
+                        <div class="testimonial-user">
+                            <h4>Meera & Rohan</h4>
+                            <span>Chennai, India</span>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="testimonial-card">
+                        <div class="rating-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-quote">"Superb luxury! Elysian Misty Retreat offers high-end luxury that
+                            easily rivals any international 5-star mountain resort. The heated jacuzzi deck over the
+                            clouds is magic."</p>
+                        <div class="testimonial-user">
+                            <h4>Vikram Malhotra</h4>
+                            <span>Mumbai, India</span>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="testimonial-card">
+                        <div class="rating-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-quote">"An amazing honeymoon stay at Silver Mist Hideaway. The glass
+                            ceiling allowed us to look at the stars from our bed, and the sunrise views from the balcony
+                            were simply breathtaking."</p>
+                        <div class="testimonial-user">
+                            <h4>Anjali & Amit</h4>
+                            <span>Delhi, India</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Navigation -->
+                <div class="carousel-nav">
+                    <button class="carousel-btn prev-btn" id="carousel-prev" aria-label="Previous Testimonial"><i
+                            class="fa-solid fa-arrow-left"></i></button>
+                    <button class="carousel-btn next-btn" id="carousel-next" aria-label="Next Testimonial"><i
+                            class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div class="carousel-dots" id="carousel-dots">
+                    <!-- Dots generated by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer Section -->
+    <footer class="luxury-footer">
+
+        <!-- Pre-Footer Premium CTA (Visual connection to hero banner) -->
+        <div class="footer-cta-banner">
+            <video autoplay loop muted playsinline class="footer-video-bg">
+                <source src="assets/homepagehero.mp4" type="video/mp4">
+            </video>
+            <div class="footer-cta-overlay"></div>
+            <div class="container footer-cta-container">
+                <div class="footer-cta-card glass-panel">
+                    <span class="sub-title">Bespoke Mountain Sanctuaries</span>
+                    <h2>Ready to Experience Voyana Kodaikanal?</h2>
+                    <p>Reserve your architectural glass villa or cozy stone cottage today. Enjoy 24/7 concierge
+                        services, private bonfire dining, and misty mountain valley views.</p>
+                    <div class="footer-cta-buttons">
+                        <a href="booking.html" class="btn btn-primary">Book Your Stay <i
+                                class="fa-solid fa-calendar-check"></i></a>
+                        <a href="contact.html" class="btn btn-secondary">Inquire Privately <i
+                                class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-main-content">
+            <div class="container">
+                <div class="footer-grid">
+
+                    <!-- Column 1: Brand & Awards -->
+                    <div class="footer-col brand-col">
+                        <a href="index.html" class="logo">
+                            <span class="logo-main">VOYANA</span>
+                            <span class="logo-sub">SANCTUARIES</span>
+                        </a>
+                        <p class="footer-desc">Curating rare, high-end private sanctuaries and five-star mountain luxury
+                            in Kodaikanal. Dedicated to visual elegance, eco-friendliness, and sustainable comfort.</p>
+
+                        <div class="footer-awards">
+                            <div class="award-item">
+                                <i class="fa-solid fa-award"></i>
+                                <span>Condé Nast Luxury Winner</span>
+                            </div>
+                            <div class="award-item">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>5-Star Hospitality Standard</span>
+                            </div>
+                        </div>
+
+                        <div class="social-icons">
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Luxury Residences -->
+                    <div class="footer-col">
+                        <h3>Luxury Residences</h3>
+                        <ul>
+                            <li><a href="details.html?id=glass-manor">The Glass Forest Manor</a></li>
+                            <li><a href="details.html?id=elysian-retreat">Elysian Misty Retreat</a></li>
+                            <li><a href="details.html?id=pine-crest">Pine Crest Presidential Villa</a></li>
+                            <li><a href="villas.html">Luxury Villas Portfolio</a></li>
+                            <li><a href="cottages.html">Mountain Cottages Portfolio</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Resort Experiences -->
+                    <div class="footer-col">
+                        <h3>Experiences</h3>
+                        <ul>
+                            <li><a href="retreats.html">Private Mountain Bonfires</a></li>
+                            <li><a href="retreats.html">Guided Pine Forest Trekking</a></li>
+                            <li><a href="retreats.html">Tranquil Lake Boating</a></li>
+                            <li><a href="dining.html">Gourmet Dining Options</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Guest Support -->
+                    <div class="footer-col">
+                        <h3>Guest Services</h3>
+                        <ul>
+                            <li><a href="about.html">About Voyana</a></li>
+                            <li><a href="testimonials.html">Guest Reviews</a></li>
+                            <li><a href="packages.html">Seasonal Packages</a></li>
+                            <li><a href="attractions.html">Local Attractions</a></li>
+                            <li><a href="contact.html">Inquiries & Directions</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 5: Location & Stats -->
+                    <div class="footer-col stats-col">
+                        <h3>The Sanctuary</h3>
+                        <p class="footer-address"><i class="fa-solid fa-location-dot"></i> Kurinji Temple Road, Pine
+                            Ridge, Kodaikanal, Tamil Nadu, India</p>
+                        <p class="footer-phone"><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                        <p class="footer-email"><i class="fa-solid fa-envelope"></i> concierge@voyanasanctuaries.com</p>
+
+                        <div class="footer-stats">
+                            <div class="stat-bubble">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">Satisfaction</span>
+                            </div>
+                            <div class="stat-bubble">
+                                <span class="stat-number">1.5K+</span>
+                                <span class="stat-label">Guests Hosted</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Newsletter Subscription Row -->
+                <div class="footer-newsletter-row">
+                    <div class="newsletter-text">
+                        <h3>The Voyana Journal</h3>
+                        <p>Subscribe for seasonal weather reports, private dining recipes, and exclusive package
+                            releases.</p>
+                    </div>
+                    <form id="newsletter-form" class="newsletter-form">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" aria-label="Subscribe">Subscribe <i
+                                class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+
+                <!-- Footer Bottom Area -->
+                <div class="footer-bottom">
+                    <div class="footer-bottom-flex">
+                        <p class="copyright">&copy; 2026 Voyana Sanctuaries Private Limited. All rights reserved.</p>
+                        <div class="footer-legal">
+                            <a href="#">Privacy Policy</a>
+                            <span class="separator">&bull;</span>
+                            <a href="#">Terms & Conditions</a>
+                        </div>
+                        <p class="crafted">Designed with forest inspiration &bull; Kodaikanal</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Custom Success Toast Notification -->
+    <div class="toast" id="success-toast">
+        <div class="toast-content">
+            <i class="fa-solid fa-circle-check toast-icon"></i>
+            <div class="toast-message">
+                <h4 id="toast-title">Request Submitted</h4>
+                <p id="toast-desc">We will contact you shortly.</p>
+            </div>
+        </div>
+        <button class="toast-close" id="toast-close-btn">&times;</button>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

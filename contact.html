@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Voyana Kodaikanal Luxury Retreats</title>
+    <meta name="description" content="Get in touch with Voyana Kodaikanal. Send secure booking inquiries, find reservation telephone numbers, and view maps.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Modern & Unique Contact Page Custom Styles */
+        .contact-modern-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 40px;
+            align-items: start;
+            margin-top: 20px;
+        }
+
+        /* Concierge Console Panel */
+        .modern-visual-panel {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: linear-gradient(rgba(18, 36, 21, 0.85), rgba(18, 36, 21, 0.95)), url('assets/cottage_mist.png');
+            background-size: cover;
+            background-position: center;
+            padding: 40px;
+            color: #ffffff;
+            box-shadow: var(--shadow-premium);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        [data-theme="dark"] .modern-visual-panel {
+            background: linear-gradient(rgba(10, 16, 11, 0.9), rgba(10, 16, 11, 0.98)), url('assets/cottage_mist.png');
+            border-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .concierge-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            padding-bottom: 20px;
+        }
+
+        .concierge-header-title h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .concierge-status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .status-pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #2ecc71;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px #2ecc71;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.9); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.5; }
+            100% { transform: scale(0.9); opacity: 1; }
+        }
+
+        /* Widgets Dashboard Grid */
+        .concierge-widgets {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+
+        .widget-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            transition: var(--transition-smooth);
+        }
+
+        .widget-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--color-gold);
+        }
+
+        .widget-icon {
+            font-size: 1.5rem;
+            color: var(--color-gold);
+            background: rgba(212, 175, 55, 0.15);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .widget-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .widget-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .widget-val {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-top: 2px;
+        }
+
+        /* Advisor Spotlight Card */
+        .advisor-spotlight {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .advisor-flex {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .advisor-img-container {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .advisor-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--color-gold);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .advisor-badge-online {
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            width: 14px;
+            height: 14px;
+            background-color: #2ecc71;
+            border: 2.5px solid #1e3f20;
+            border-radius: 50%;
+        }
+
+        .advisor-info h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .advisor-info p {
+            font-size: 0.8rem;
+            color: var(--color-gold);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .advisor-quote {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-top: 16px;
+            font-style: italic;
+            border-left: 3px solid var(--color-gold);
+            padding-left: 12px;
+        }
+
+        /* Quick Interactive Channels & Drawer panels */
+        .channel-buttons-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 30px;
+        }
+
+        .channel-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            text-align: left;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .channel-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: transparent;
+            transition: var(--transition-smooth);
+        }
+
+        .channel-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .channel-card.active::before {
+            background: var(--color-gold);
+        }
+
+        .channel-card.active {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--color-gold);
+        }
+
+        .channel-card i {
+            font-size: 1.6rem;
+            color: var(--color-gold);
+            margin-bottom: 12px;
+        }
+
+        .channel-card h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .channel-card p {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        /* Interactive Drawer Drawdown Containers */
+        .console-drawer {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            background: rgba(255, 255, 255, 0.04);
+            border: 0 solid rgba(255,255,255,0.08);
+            border-radius: var(--radius-md);
+            margin-top: 0;
+        }
+
+        .console-drawer.open {
+            max-height: 400px;
+            opacity: 1;
+            padding: 24px;
+            border-width: 1px;
+            margin-top: 20px;
+        }
+
+        /* WhatsApp Chat drawer details */
+        .wa-chat-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+        }
+
+        .wa-chat-body {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .wa-bubble {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 12px 16px;
+            border-radius: 4px 16px 16px 16px;
+            max-width: 85%;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #ffffff;
+            position: relative;
+        }
+
+        /* Typing indicator */
+        .typing-dots {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            padding: 4px 8px;
+        }
+
+        .typing-dots span {
+            width: 6px;
+            height: 6px;
+            background: var(--color-gold);
+            border-radius: 50%;
+            display: inline-block;
+            animation: typing 1.4s infinite ease-in-out;
+        }
+
+        .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes typing {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        .btn-wa-action {
+            background: #25d366;
+            color: #ffffff;
+            border: none;
+            padding: 10px 18px;
+            font-weight: 600;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition-smooth);
+        }
+
+        .btn-wa-action:hover {
+            background: #20ba59;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        /* Call Scheduler drawer details */
+        .scheduler-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .slot-btn {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #ffffff;
+            padding: 12px 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-align: center;
+        }
+
+        .slot-btn:hover, .slot-btn.active {
+            background: var(--color-gold);
+            color: #122415;
+            border-color: var(--color-gold);
+        }
+
+        /* Right Column Form Style */
+        .modern-inquiry-panel {
+            padding: 30px 40px;
+            background: var(--color-bg-white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-premium);
+            border: 1px solid var(--glass-border);
+        }
+
+        .modern-form-title {
+            font-size: 2.2rem;
+            color: var(--color-primary-dark);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .modern-form-desc {
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .modern-form-group {
+            position: relative;
+            margin-bottom: 28px;
+        }
+
+        .modern-form-input {
+            width: 100%;
+            padding: 12px 0 6px 0;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            background: transparent !important;
+            border: none;
+            border-bottom: 2px solid rgba(30, 63, 32, 0.12);
+            color: var(--color-text-dark);
+            transition: var(--transition-smooth);
+        }
+
+        [data-theme="dark"] .modern-form-input {
+            border-bottom-color: rgba(255, 255, 255, 0.08);
+            color: #f0f5f2;
+        }
+
+        .modern-form-input:focus {
+            outline: none;
+            border-bottom-color: var(--color-gold);
+        }
+
+        .modern-form-label {
+            position: absolute;
+            top: 14px;
+            left: 0;
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+            pointer-events: none;
+            transition: 0.3s ease all;
+        }
+
+        .modern-form-input:focus ~ .modern-form-label,
+        .modern-form-input:valid ~ .modern-form-label {
+            top: -12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--color-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .modern-form-select {
+            width: 100%;
+            padding: 12px 0 6px 0;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid rgba(30, 63, 32, 0.12);
+            color: var(--color-text-dark);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        [data-theme="dark"] .modern-form-select {
+            border-bottom-color: rgba(255, 255, 255, 0.08);
+            color: #f0f5f2;
+        }
+
+        .modern-form-select:focus {
+            outline: none;
+            border-bottom-color: var(--color-gold);
+        }
+
+        /* Retreat Dynamic Preview Card */
+        .retreat-preview-card {
+            background: var(--color-bg-light);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            margin-top: 10px;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transform: scale(0.95);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .retreat-preview-card.show {
+            opacity: 1;
+            max-height: 160px;
+            transform: scale(1);
+            margin-bottom: 20px;
+        }
+
+        .retreat-preview-img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: var(--radius-sm);
+            flex-shrink: 0;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .retreat-preview-details {
+            flex-grow: 1;
+        }
+
+        .retreat-preview-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-primary-dark);
+            margin-bottom: 4px;
+        }
+
+        [data-theme="dark"] .retreat-preview-title {
+            color: #ffffff;
+        }
+
+        .retreat-preview-desc {
+            font-size: 0.75rem;
+            color: var(--color-text-muted);
+            margin-bottom: 6px;
+        }
+
+        .retreat-preview-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(0,0,0,0.06);
+            padding-top: 6px;
+            margin-top: 6px;
+        }
+
+        [data-theme="dark"] .retreat-preview-meta {
+            border-top-color: rgba(255,255,255,0.06);
+        }
+
+        .retreat-preview-price {
+            font-weight: 700;
+            color: var(--color-gold);
+            font-size: 0.95rem;
+        }
+
+        .retreat-preview-capacity {
+            font-size: 0.7rem;
+            color: var(--color-text-muted);
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        /* FAQ Station Redesign with Search Bar */
+        .faq-section {
+            margin-top: 100px;
+        }
+
+        .faq-search-wrapper {
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+            position: relative;
+        }
+
+        .faq-search-input {
+            width: 100%;
+            padding: 16px 24px 16px 50px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            background: var(--color-bg-white);
+            border: 1.5px solid var(--glass-border);
+            border-radius: 40px;
+            color: var(--color-text-dark);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition-smooth);
+        }
+
+        .faq-search-input:focus {
+            outline: none;
+            border-color: var(--color-gold);
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.1);
+        }
+
+        .faq-search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--color-gold);
+            font-size: 1.1rem;
+        }
+
+        .faq-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--color-bg-white);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-soft);
+            overflow: hidden;
+            transition: var(--transition-smooth);
+        }
+
+        .faq-item.active {
+            border-color: var(--color-gold);
+            box-shadow: var(--shadow-premium);
+        }
+
+        .faq-header {
+            padding: 24px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.15rem;
+            color: var(--color-primary-dark);
+            font-family: var(--font-heading);
+            transition: var(--transition-smooth);
+        }
+
+        [data-theme="dark"] .faq-header {
+            color: var(--color-text-dark);
+        }
+
+        .faq-item:hover .faq-header {
+            color: var(--color-gold);
+        }
+
+        .faq-icon {
+            font-size: 0.9rem;
+            transition: transform 0.3s ease;
+            color: var(--color-gold);
+            background: var(--color-bg-light);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--glass-border);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+            background: var(--color-gold);
+            color: #122415;
+            border-color: var(--color-gold);
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            padding: 0 30px;
+            font-size: 0.92rem;
+            color: var(--color-text-muted);
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-content {
+            max-height: 200px;
+            padding-bottom: 24px;
+        }
+
+        .faq-no-results {
+            text-align: center;
+            padding: 40px;
+            color: var(--color-text-muted);
+            font-size: 1.1rem;
+            display: none;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .contact-modern-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .modern-inquiry-panel {
+                padding: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .concierge-widgets {
+                grid-template-columns: 1fr;
+            }
+            .channel-buttons-grid {
+                grid-template-columns: 1fr;
+            }
+            .scheduler-grid {
+                grid-template-columns: 1fr;
+            }
+            .retreat-preview-card.show {
+                max-height: 250px;
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+            .retreat-preview-img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="header sticky" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-main">VOYANA</span>
+                <span class="logo-sub">SANCTUARIES</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="villas.html" class="nav-link">Villas</a></li>
+                    <li><a href="cottages.html" class="nav-link">Cottages</a></li>
+                    <li><a href="retreats.html" class="nav-link">Retreats</a></li>
+                    <li><a href="dining.html" class="nav-link">Dining</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-book-mobile"><a href="booking.html" class="btn btn-nav">Book Stay</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-right-actions">
+                <!-- Theme Toggle Switch -->
+                <div class="theme-switch" id="themeToggleBtn">
+                    <div class="theme-switch-slider"><i class="fa-solid fa-moon" id="themeToggleIcon"></i></div>
+                </div>
+
+                <a href="booking.html" class="btn btn-nav">Book Stay</a>
+            </div>
+        </div>
+</header>
+
+    <!-- Page Header -->
+    <section class="page-header contact-banner">
+        <div class="hero-overlay"></div>
+        <div class="page-header-content">
+            <h1 class="page-header-title">Connect with Voyana</h1>
+            <div class="page-header-breadcrumbs">
+                <a href="index.html">Home</a> / <span>Contact Inquiries</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Unique Contact Section -->
+    <section class="section contact-section">
+        <div class="container">
+            <div class="contact-modern-grid">
+                <!-- Left Column: Visual Details Card -->
+                <div class="modern-visual-panel">
+                    <div class="concierge-header">
+                        <div class="concierge-header-title">
+                            <h2>Concierge Console</h2>
+                        </div>
+                        <div class="concierge-status-badge">
+                            <span class="status-pulse-dot"></span>
+                            <span>Aisha Online</span>
+                        </div>
+                    </div>
+
+                    <!-- Widgets Section: Local Clock and Simulated weather -->
+                    <div class="concierge-widgets">
+                        <div class="widget-card">
+                            <div class="widget-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div class="widget-details">
+                                <span class="widget-label">Kodaikanal Time</span>
+                                <span class="widget-val" id="live-clock">12:00:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="widget-card">
+                            <div class="widget-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+                            <div class="widget-details">
+                                <span class="widget-label">Estate Weather</span>
+                                <span class="widget-val" id="live-weather">16°C &bull; Mist Clouds</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Advisor Profile spotlight -->
+                    <div class="advisor-spotlight">
+                        <div class="advisor-flex">
+                            <div class="advisor-img-container">
+                                <img src="assets/concierge_advisor.png" class="advisor-img" alt="Aisha Rahaman">
+                                <span class="advisor-badge-online"></span>
+                            </div>
+                            <div class="advisor-info">
+                                <h4>Aisha Rahaman</h4>
+                                <p>Lead Reservation Advisor</p>
+                            </div>
+                        </div>
+                        <p class="advisor-quote">"Greetings from Kodaikanal. I am dedicated to crafting your private mountain itinerary, handling fireplace amenities, and planning high-end dining options."</p>
+                    </div>
+
+                    <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 24px; font-size: 0.9rem; line-height: 1.7; margin-bottom: 24px;">
+                        <p style="margin-bottom: 6px;"><strong style="color:var(--color-gold);">Resort Office:</strong> Voyana Estates, Coaker's Walk Road, Kodaikanal, Tamil Nadu</p>
+                        <p style="margin-bottom: 6px;"><strong style="color:var(--color-gold);">Direct Line:</strong> +91 98765 43210 &bull; +91 80 4321 0099</p>
+                        <p><strong style="color:var(--color-gold);">Estates Desk:</strong> 24 Hours Open Daily</p>
+                    </div>
+
+                    <!-- Modern Interactive Quick Channels Grid -->
+                    <div class="channel-buttons-grid">
+                        <div class="channel-card" data-channel="whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <h4>WhatsApp Live</h4>
+                            <p>Butler chat callback</p>
+                        </div>
+                        <div class="channel-card" data-channel="scheduler">
+                            <i class="fa-solid fa-headset"></i>
+                            <h4>Schedule Call</h4>
+                            <p>Book advisor callback</p>
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp Live Drawer -->
+                    <div class="console-drawer" id="whatsapp-drawer">
+                        <div class="wa-chat-header">
+                            <img src="assets/concierge_advisor.png" class="advisor-img" style="width:36px; height:36px;" alt="Aisha">
+                            <div>
+                                <h4 style="font-size:0.95rem; font-weight:600; color:#fff; line-height:1.2;">Aisha Rahaman</h4>
+                                <p style="font-size:0.7rem; color:#2ecc71; font-weight:600; text-transform:uppercase; display:flex; align-items:center; gap:4px;"><span class="status-pulse-dot" style="width:6px; height:6px;"></span> Active Now</p>
+                            </div>
+                        </div>
+                        <div class="wa-chat-body">
+                            <!-- Typing Indicator -->
+                            <div class="wa-bubble" id="typing-indicator" style="display:none; background:rgba(255,255,255,0.08); width:70px;">
+                                <div class="typing-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <!-- Message Bubble -->
+                            <div class="wa-bubble" id="wa-message" style="display:none;">
+                                Salutations from the mist! I've prepped a custom check-in dossier for your dates. Would you like me to send it over WhatsApp?
+                            </div>
+                        </div>
+                        <a href="https://wa.me/919876543210" target="_blank" class="btn-wa-action">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Start WhatsApp Chat</span>
+                        </a>
+                    </div>
+
+                    <!-- Call Scheduler Drawer -->
+                    <div class="console-drawer" id="callback-drawer">
+                        <div id="scheduler-form-area">
+                            <h4 style="color:#ffffff; font-size:1.1rem; margin-bottom:12px;">Reserve Phone Consultation</h4>
+                            <p style="font-size:0.8rem; color:rgba(255,255,255,0.7); margin-bottom:16px;">Select a preferred slot. Aisha will ring you directly.</p>
+                            
+                            <div class="scheduler-grid">
+                                <button class="slot-btn active">Within 10 mins (Now)</button>
+                                <button class="slot-btn">Today Afternoon</button>
+                                <button class="slot-btn">Tomorrow Morning</button>
+                            </div>
+
+                            <div style="position:relative; margin-bottom:16px;">
+                                <input type="tel" id="scheduler-phone" placeholder="Enter phone for callback" style="width:100%; padding:10px 14px; border-radius:8px; border:1px solid rgba(255,255,255,0.15); background:rgba(255,255,255,0.06); color:#fff; font-family:var(--font-body); font-size:0.9rem;" required>
+                            </div>
+
+                            <button id="confirm-call-btn" class="btn btn-primary btn-block" style="padding:10px; font-size:0.85rem; background:var(--color-gold); border-color:var(--color-gold); color:#122415;">
+                                Confirm Appointment
+                            </button>
+                        </div>
+                        
+                        <div id="scheduler-success" style="display:none; text-align:center; padding:20px 0;">
+                            <i class="fa-solid fa-circle-check" style="font-size:3rem; color:var(--color-gold); margin-bottom:16px;"></i>
+                            <h4 style="color:#ffffff; font-size:1.2rem; margin-bottom:8px;">Appointment Confirmed</h4>
+                            <p style="font-size:0.85rem; color:rgba(255,255,255,0.75); line-height:1.6;">Aisha Rahaman will contact you <strong id="scheduled-time-span">Within 10 mins</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Clean Underline Inquiry Console -->
+                <div class="modern-inquiry-panel">
+                    <h3 class="modern-form-title">Secure Inquiry Console</h3>
+                    <p class="modern-form-desc">Provide your details and select your preferred mountain retreat. Our reservation counselor will call you within an hour.</p>
+
+                    <form id="contact-inquiry-form" class="contact-form">
+                        <div class="modern-form-group">
+                            <input type="text" id="contact-name" class="modern-form-input" required>
+                            <label for="contact-name" class="modern-form-label">Full Name</label>
+                        </div>
+                        <div class="modern-form-group">
+                            <input type="email" id="contact-email" class="modern-form-input" required>
+                            <label for="contact-email" class="modern-form-label">Email Address</label>
+                        </div>
+                        <div class="modern-form-group">
+                            <input type="tel" id="contact-phone" class="modern-form-input" required>
+                            <label for="contact-phone" class="modern-form-label">Phone Number</label>
+                        </div>
+                        
+                        <!-- Preferred Sanctuary Select with dynamic preview -->
+                        <div class="modern-form-group" style="margin-top: 10px; margin-bottom: 20px;">
+                            <label style="font-size:0.75rem; font-weight:700; color:var(--color-gold); text-transform:uppercase;">Preferred Sanctuary</label>
+                            <select id="contact-property" class="modern-form-select">
+                                <option value="none">Choose a Retreat...</option>
+                                <option value="glass-manor">The Glass Forest Manor</option>
+                                <option value="elysian-retreat">Elysian Misty Retreat</option>
+                                <option value="whispering-pines">Whispering Pines Cabin</option>
+                                <option value="silver-mist">Silver Mist Hideaway</option>
+                                <option value="general">General / Customize Inquiry</option>
+                            </select>
+                        </div>
+
+                        <!-- Dynamic Retreat Preview Card Panel -->
+                        <div class="retreat-preview-card" id="retreat-preview-card">
+                            <img src="assets/villa_pine.png" class="retreat-preview-img" id="retreat-preview-img" alt="Retreat Preview">
+                            <div class="retreat-preview-details">
+                                <h4 class="retreat-preview-title" id="retreat-preview-title">The Glass Forest Manor</h4>
+                                <p class="retreat-preview-desc" id="retreat-preview-desc">Architectural glass walls facing towering pine forests.</p>
+                                <div class="retreat-preview-meta">
+                                    <span class="retreat-preview-capacity" id="retreat-preview-capacity">Up to 6 Guests &bull; 3 Beds</span>
+                                    <span class="retreat-preview-price" id="retreat-preview-price">₹28,000 / Night</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modern-form-group" style="margin-top: 20px;">
+                            <input type="text" id="contact-message" class="modern-form-input" required>
+                            <label for="contact-message" class="modern-form-label">Special Requests / Planned Dates</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" style="margin-top: 20px;">
+                            <span>Transmit Secured Request</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Redesigned Minimal FAQ Section with Real-Time Search Bar -->
+            <div class="faq-section">
+                <div class="section-header" style="margin-bottom: 40px;">
+                    <span class="sub-title">COMMON QUERIES</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <div class="divider"></div>
+                    <p class="section-desc">Search through our standard policies, local weather details, and airport coordinates.</p>
+                </div>
+
+                <!-- FAQ Keyword Search Bar -->
+                <div class="faq-search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass faq-search-icon"></i>
+                    <input type="text" id="faq-search" class="faq-search-input" placeholder="Type keywords to filter questions... (e.g. 'airport', 'mist', 'cancellation')">
+                </div>
+
+                <div class="faq-accordion" id="faq-accordion-list">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <span>How do I reach the resort from Madurai airport?</span>
+                            <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="faq-content">
+                            Voyana Kodaikanal is approximately 130 km (a scenic 3-hour drive) from Madurai International Airport. Our reservations team can coordinate private luxury sedans or SUV pickups directly from Madurai or Coimbatore airports.
+                        </div>
+                    </div>
+                    <!-- FAQ 2 -->
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <span>What is the peak mist season in Kodaikanal?</span>
+                            <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="faq-content">
+                            The majestic cloud mist occurs heavily during the monsoon months (July to September) and winter valleys (November to January). Temperatures average 12°C to 18°C. Every cottage fireplace is fully operational and stacked with wood for cold evenings.
+                        </div>
+                    </div>
+                    <!-- FAQ 3 -->
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <span>Do you provide accommodation for personal staff/drivers?</span>
+                            <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="faq-content">
+                            Yes, we maintain separate premium staff lodging facilities on-site. Accommodations, basic dining arrangements, and parking facilities can be requested through your personal host during date finalizations.
+                        </div>
+                    </div>
+                    <!-- FAQ 4 -->
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <span>What is your cancellation and booking modification policy?</span>
+                            <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="faq-content">
+                            We support full refunds for cancellations made at least 14 days prior to check-in. Modifications to bookings (such as dates adjustments) can be processed free of charge up to 7 days before check-in, depending on availability.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ No Results Msg -->
+                <div class="faq-no-results" id="faq-no-results">
+                    <i class="fa-solid fa-face-frown" style="font-size: 2.5rem; color: var(--color-gold); margin-bottom: 12px;"></i>
+                    <p>No matching questions found. Submit your question using the inquiry console above and we'll reply directly!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Footer Section -->
+    <footer class="luxury-footer">
+        
+        <!-- Pre-Footer Premium CTA (Visual connection to hero banner) -->
+        <div class="footer-cta-banner">
+            <video autoplay loop muted playsinline class="footer-video-bg">
+                <source src="assets/homepagehero.mp4" type="video/mp4">
+            </video>
+            <div class="footer-cta-overlay"></div>
+            <div class="container footer-cta-container">
+                <div class="footer-cta-card glass-panel">
+                    <span class="sub-title">Bespoke Mountain Sanctuaries</span>
+                    <h2>Ready to Experience Voyana Kodaikanal?</h2>
+                    <p>Reserve your architectural glass villa or cozy stone cottage today. Enjoy 24/7 concierge services, private bonfire dining, and misty mountain valley views.</p>
+                    <div class="footer-cta-buttons">
+                        <a href="booking.html" class="btn btn-primary">Book Your Stay <i class="fa-solid fa-calendar-check"></i></a>
+                        <a href="contact.html" class="btn btn-secondary">Inquire Privately <i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-main-content">
+            <div class="container">
+                <div class="footer-grid">
+                    
+                    <!-- Column 1: Brand & Awards -->
+                    <div class="footer-col brand-col">
+                        <a href="index.html" class="logo">
+                            <span class="logo-main">VOYANA</span>
+                            <span class="logo-sub">SANCTUARIES</span>
+                        </a>
+                        <p class="footer-desc">Curating rare, high-end private sanctuaries and five-star mountain luxury in Kodaikanal. Dedicated to visual elegance, eco-friendliness, and sustainable comfort.</p>
+                        
+                        <div class="footer-awards">
+                            <div class="award-item">
+                                <i class="fa-solid fa-award"></i>
+                                <span>Condé Nast Luxury Winner</span>
+                            </div>
+                            <div class="award-item">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>5-Star Hospitality Standard</span>
+                            </div>
+                        </div>
+
+                        <div class="social-icons">
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Luxury Residences -->
+                    <div class="footer-col">
+                        <h3>Luxury Residences</h3>
+                        <ul>
+                            <li><a href="details.html?id=glass-manor">The Glass Forest Manor</a></li>
+                            <li><a href="details.html?id=elysian-retreat">Elysian Misty Retreat</a></li>
+                            <li><a href="details.html?id=pine-crest">Pine Crest Presidential Villa</a></li>
+                            <li><a href="villas.html">Luxury Villas Portfolio</a></li>
+                            <li><a href="cottages.html">Mountain Cottages Portfolio</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Resort Experiences -->
+                    <div class="footer-col">
+                        <h3>Experiences</h3>
+                        <ul>
+                            <li><a href="retreats.html">Private Mountain Bonfires</a></li>
+                            <li><a href="retreats.html">Guided Pine Forest Trekking</a></li>
+                            <li><a href="retreats.html">Tranquil Lake Boating</a></li>
+                            <li><a href="dining.html">Gourmet Dining Options</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Guest Support -->
+                    <div class="footer-col">
+                        <h3>Guest Services</h3>
+                        <ul>
+                            <li><a href="about.html">About Voyana</a></li>
+                            <li><a href="testimonials.html">Guest Reviews</a></li>
+                            <li><a href="packages.html">Seasonal Packages</a></li>
+                            <li><a href="attractions.html">Local Attractions</a></li>
+                            <li><a href="contact.html">Inquiries & Directions</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 5: Location & Stats -->
+                    <div class="footer-col stats-col">
+                        <h3>The Sanctuary</h3>
+                        <p class="footer-address"><i class="fa-solid fa-location-dot"></i> Kurinji Temple Road, Pine Ridge, Kodaikanal, Tamil Nadu, India</p>
+                        <p class="footer-phone"><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                        <p class="footer-email"><i class="fa-solid fa-envelope"></i> concierge@voyanasanctuaries.com</p>
+                        
+                        <div class="footer-stats">
+                            <div class="stat-bubble">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">Satisfaction</span>
+                            </div>
+                            <div class="stat-bubble">
+                                <span class="stat-number">1.5K+</span>
+                                <span class="stat-label">Guests Hosted</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Newsletter Subscription Row -->
+                <div class="footer-newsletter-row">
+                    <div class="newsletter-text">
+                        <h3>The Voyana Journal</h3>
+                        <p>Subscribe for seasonal weather reports, private dining recipes, and exclusive package releases.</p>
+                    </div>
+                    <form id="newsletter-form" class="newsletter-form">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" aria-label="Subscribe">Subscribe <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+
+                <!-- Footer Bottom Area -->
+                <div class="footer-bottom">
+                    <div class="footer-bottom-flex">
+                        <p class="copyright">&copy; 2026 Voyana Sanctuaries Private Limited. All rights reserved.</p>
+                        <div class="footer-legal">
+                            <a href="#">Privacy Policy</a>
+                            <span class="separator">&bull;</span>
+                            <a href="#">Terms & Conditions</a>
+                        </div>
+                        <p class="crafted">Designed with forest inspiration &bull; Kodaikanal</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Custom Success Toast Notification -->
+    <div class="toast" id="success-toast">
+        <div class="toast-content">
+            <i class="fa-solid fa-circle-check toast-icon"></i>
+            <div class="toast-message">
+                <h4 id="toast-title">Request Submitted</h4>
+                <p id="toast-desc">We will contact you shortly.</p>
+            </div>
+        </div>
+        <button class="toast-close" id="toast-close-btn">&times;</button>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            /* --- 1. Live clock local IST time --- */
+            function updateClock() {
+                const clockEl = document.getElementById('live-clock');
+                if (clockEl) {
+                    const now = new Date();
+                    const options = {
+                        timeZone: 'Asia/Kolkata',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        second: '2-digit',
+                        hour12: true
+                    };
+                    clockEl.textContent = new Intl.DateTimeFormat('en-US', options).format(now);
+                }
+            }
+            setInterval(updateClock, 1000);
+            updateClock();
+
+            /* --- 2. Simulated local weather text --- */
+            function updateWeather() {
+                const weatherEl = document.getElementById('live-weather');
+                if (weatherEl) {
+                    const hour = new Date().getHours();
+                    let temp = 15;
+                    let condition = "Misty Valley Breezes";
+                    let icon = "fa-cloud-meatball";
+                    
+                    if (hour >= 5 && hour < 12) {
+                        temp = 12 + Math.floor(Math.random() * 3);
+                        condition = "Dewy Cloud Cover";
+                        icon = "fa-cloud-sun-rain";
+                    } else if (hour >= 12 && hour < 17) {
+                        temp = 17 + Math.floor(Math.random() * 3);
+                        condition = "Clear Pine Sunshine";
+                        icon = "fa-sun";
+                    } else if (hour >= 17 && hour < 21) {
+                        temp = 14 + Math.floor(Math.random() * 2);
+                        condition = "Descending Ridge Mist";
+                        icon = "fa-cloud-showers-heavy";
+                    } else {
+                        temp = 10 + Math.floor(Math.random() * 3);
+                        condition = "Chilly Starlit Skies";
+                        icon = "fa-moon";
+                    }
+                    
+                    weatherEl.innerHTML = `<i class="fa-solid ${icon}" style="margin-right: 5px; color: var(--color-gold);"></i> ${temp}°C &bull; ${condition}`;
+                }
+            }
+            updateWeather();
+            setInterval(updateWeather, 60000);
+
+            /* --- 3. WhatsApp and Callback Scheduler Drawers --- */
+            const channelCards = document.querySelectorAll('.channel-card');
+            const whatsappDrawer = document.getElementById('whatsapp-drawer');
+            const callbackDrawer = document.getElementById('callback-drawer');
+            const waMessage = document.getElementById('wa-message');
+            const typingIndicator = document.getElementById('typing-indicator');
+
+            channelCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const channel = card.getAttribute('data-channel');
+                    
+                    if (card.classList.contains('active')) {
+                        card.classList.remove('active');
+                        whatsappDrawer.classList.remove('open');
+                        callbackDrawer.classList.remove('open');
+                        return;
+                    }
+
+                    channelCards.forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
+
+                    if (channel === 'whatsapp') {
+                        callbackDrawer.classList.remove('open');
+                        whatsappDrawer.classList.add('open');
+                        
+                        typingIndicator.style.display = 'flex';
+                        waMessage.style.display = 'none';
+                        
+                        setTimeout(() => {
+                            typingIndicator.style.display = 'none';
+                            waMessage.style.display = 'block';
+                        }, 1200);
+                    } else if (channel === 'scheduler') {
+                        whatsappDrawer.classList.remove('open');
+                        callbackDrawer.classList.add('open');
+                    }
+                });
+            });
+
+            // Slot selections
+            const slotBtns = document.querySelectorAll('.slot-btn');
+            let selectedSlot = 'Within 10 mins (Now)';
+            slotBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    slotBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    selectedSlot = btn.textContent;
+                });
+            });
+
+            // Confirm call request
+            const confirmCallBtn = document.getElementById('confirm-call-btn');
+            const schedulerForm = document.getElementById('scheduler-form-area');
+            const schedulerSuccess = document.getElementById('scheduler-success');
+            const scheduledTimeSpan = document.getElementById('scheduled-time-span');
+
+            if (confirmCallBtn) {
+                confirmCallBtn.addEventListener('click', () => {
+                    const phoneVal = document.getElementById('scheduler-phone').value.trim();
+                    if (!phoneVal) {
+                        alert('Please enter your phone number.');
+                        return;
+                    }
+                    schedulerForm.style.display = 'none';
+                    schedulerSuccess.style.display = 'block';
+                    scheduledTimeSpan.textContent = selectedSlot;
+                    
+                    if (window.showToast) {
+                        window.showToast('Callback Reserved', `A concierge advisor will call you at ${phoneVal} within ${selectedSlot}.`, 'success');
+                    }
+                });
+            }
+
+            /* --- 4. Dynamic Sanctuary Selector Preview --- */
+            const sanctuarySelect = document.getElementById('contact-property');
+            const previewCard = document.getElementById('retreat-preview-card');
+            const previewImg = document.getElementById('retreat-preview-img');
+            const previewTitle = document.getElementById('retreat-preview-title');
+            const previewDesc = document.getElementById('retreat-preview-desc');
+            const previewCapacity = document.getElementById('retreat-preview-capacity');
+            const previewPrice = document.getElementById('retreat-preview-price');
+
+            const retreatDetails = {
+                'glass-manor': {
+                    title: 'The Glass Forest Manor',
+                    img: 'assets/villa_pine.png',
+                    desc: 'Stunning glass walls opening directly into private pine gardens.',
+                    capacity: 'Up to 6 Guests &bull; 3 Bedrooms',
+                    price: '₹28,000 / Night'
+                },
+                'elysian-retreat': {
+                    title: 'Elysian Misty Retreat',
+                    img: 'assets/hero_background.png',
+                    desc: 'Spectacular sunset deck overlooking Coaker\'s Walk clouds.',
+                    capacity: 'Up to 8 Guests &bull; 4 Bedrooms',
+                    price: '₹35,000 / Night'
+                },
+                'whispering-pines': {
+                    title: 'Whispering Pines Cabin',
+                    img: 'assets/cottage_mist.png',
+                    desc: 'Charming stone and timber cabin with cozy outdoor fireplaces.',
+                    capacity: 'Up to 4 Guests &bull; 2 Bedrooms',
+                    price: '₹18,500 / Night'
+                },
+                'silver-mist': {
+                    title: 'Silver Mist Honeymoon Cabin',
+                    img: 'assets/gallery_interior.png',
+                    desc: 'Couples retreat with glass skylights for starlit nights.',
+                    capacity: 'Up to 2 Guests &bull; 1 Bedroom',
+                    price: '₹14,000 / Night'
+                }
+            };
+
+            sanctuarySelect.addEventListener('change', () => {
+                const selected = sanctuarySelect.value;
+                if (selected && retreatDetails[selected]) {
+                    const details = retreatDetails[selected];
+                    previewImg.src = details.img;
+                    previewTitle.textContent = details.title;
+                    previewDesc.textContent = details.desc;
+                    previewCapacity.innerHTML = details.capacity;
+                    previewPrice.textContent = details.price;
+                    previewCard.classList.add('show');
+                } else {
+                    previewCard.classList.remove('show');
+                }
+            });
+
+            /* --- 5. FAQ Search & Live Filter --- */
+            const faqSearch = document.getElementById('faq-search');
+            const faqItems = document.querySelectorAll('.faq-item');
+            const faqNoResults = document.getElementById('faq-no-results');
+
+            if (faqSearch) {
+                faqSearch.addEventListener('input', () => {
+                    const query = faqSearch.value.toLowerCase().trim();
+                    let matchCount = 0;
+
+                    faqItems.forEach(item => {
+                        const question = item.querySelector('.faq-header span').textContent.toLowerCase();
+                        const answer = item.querySelector('.faq-content').textContent.toLowerCase();
+
+                        if (question.includes(query) || answer.includes(query)) {
+                            item.style.display = 'block';
+                            matchCount++;
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+
+                    if (matchCount === 0 && query !== '') {
+                        faqNoResults.style.display = 'block';
+                    } else {
+                        faqNoResults.style.display = 'none';
+                    }
+                });
+            }
+
+            faqItems.forEach(item => {
+                const header = item.querySelector('.faq-header');
+                header.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    faqItems.forEach(i => i.classList.remove('active'));
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+            /* --- 6. Form Submission & localstorage sync --- */
+            const contactForm = document.getElementById('contact-inquiry-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('contact-name').value.trim();
+                    const email = document.getElementById('contact-email').value.trim();
+                    const phone = document.getElementById('contact-phone').value.trim();
+                    const sanctuary = document.getElementById('contact-property').value;
+                    const message = document.getElementById('contact-message').value.trim();
+                    
+                    const inqId = 'INQ-' + Math.floor(1000 + Math.random() * 9000);
+                    const todayStr = new Date().toISOString().split('T')[0];
+                    
+                    let retreatTitle = 'General Inquiry';
+                    if (retreatDetails[sanctuary]) {
+                        retreatTitle = retreatDetails[sanctuary].title;
+                    }
+
+                    const newInquiry = {
+                        id: inqId,
+                        name: name,
+                        email: email,
+                        phone: phone,
+                        retreat: retreatTitle,
+                        message: message,
+                        date: todayStr,
+                        status: 'Unread'
+                    };
+
+                    const existingInquiries = JSON.parse(localStorage.getItem('voyana_inquiries')) || [];
+                    existingInquiries.push(newInquiry);
+                    localStorage.setItem('voyana_inquiries', JSON.stringify(existingInquiries));
+
+                    if (window.showToast) {
+                        window.showToast(
+                            'Inquiry Transmitted',
+                            `Thank you, ${name}! Aisha Rahaman will review your request for "${retreatTitle}" and call you at ${phone} shortly.`,
+                            'success',
+                            7000
+                        );
+                    } else {
+                        alert(`Thank you, ${name}! Your inquiry for "${retreatTitle}" has been received.`);
+                    }
+
+                    contactForm.reset();
+                    previewCard.classList.remove('show');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
